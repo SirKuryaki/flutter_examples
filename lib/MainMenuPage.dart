@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'form/FormPage.dart';
 
 class MainMenuPage extends StatefulWidget {
   @override
@@ -28,7 +29,9 @@ class _MainMenuPageState extends State<MainMenuPage> {
               padding: const EdgeInsets.all(8.0),
               textColor: Colors.white,
               color: Colors.blue,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).pushNamed(FORM_PAGE_ROUTE);
+              },
               child: new Text(
                 'Formulario de Carga',
               ),

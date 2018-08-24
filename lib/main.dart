@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_form_validator_example/MainMenuPage.dart';
+import 'MainMenuPage.dart';
+import 'form/FormPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -8,11 +9,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Flutter Demo',
-      theme: new ThemeData(
-        primaryColor: Colors.grey.shade700,
-      ),
-      home: MainMenuPage(),
-    );
+        title: 'Flutter Demo',
+        theme: new ThemeData(
+          primaryColor: Colors.grey.shade700,
+        ),
+        home: MainMenuPage(),
+        routes: {
+          FORM_PAGE_ROUTE: (BuildContext context) => FormPage(),
+        });
   }
 }
