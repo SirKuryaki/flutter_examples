@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'form/FormPage.dart';
+import 'list/ListPage.dart';
 
 class MainMenuPage extends StatefulWidget {
   @override
@@ -20,20 +21,37 @@ class _MainMenuPageState extends State<MainMenuPage> {
             Center(
                 child: Padding(
               padding: const EdgeInsets.all(16.0),
-              child: Text(
+              child: const Text(
                 'Bienvenidos!',
                 style: TextStyle(fontSize: 22.0),
               ),
             )),
-            new RaisedButton(
+            Container(
+              height: 22.0,
+            ),
+            RaisedButton(
               padding: const EdgeInsets.all(8.0),
               textColor: Colors.white,
               color: Colors.blue,
               onPressed: () {
                 Navigator.of(context).pushNamed(FORM_PAGE_ROUTE);
               },
-              child: new Text(
+              child: Text(
                 'Formulario de Carga',
+              ),
+            ),
+            Container(
+              height: 22.0,
+            ),
+            RaisedButton(
+              padding: const EdgeInsets.all(8.0),
+              textColor: Colors.white,
+              color: Colors.blue,
+              onPressed: () {
+                Navigator.of(context).pushNamed(LIST_PAGE_ROUTE);
+              },
+              child: const Text(
+                'Ver autos cargados',
               ),
             ),
           ],

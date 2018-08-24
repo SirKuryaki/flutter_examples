@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'MainMenuPage.dart';
 import 'form/FormPage.dart';
+import 'list/ListPage.dart';
 
 void main() => runApp(new MyApp());
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         home: MainMenuPage(),
         routes: {
           FORM_PAGE_ROUTE: (BuildContext context) => FormPage(),
+          LIST_PAGE_ROUTE: (BuildContext context) => ListPage(),
         });
   }
 }

@@ -33,4 +33,13 @@ class Car {
 
     return map;
   }
+
+  Car.fromMap(Map map) {
+    id = map['id'];
+    brand = map['brand'];
+    model = map['model'];
+    initialOdometer = map['odometer'];
+    fuelType = map['fuel_type'];
+    measureUnit = map['measure_unit'];
+  }
 }

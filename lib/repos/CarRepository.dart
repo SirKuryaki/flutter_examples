@@ -24,4 +24,19 @@ class CarRepository {
     return car;
   }
 
+  Future<List<Car>> getAllCars() async {
+    var db = await _getDatabase();
+    List<Map> list = await db.rawQuery('SELECT * FROM $TABLE_CAR');
+    print(list);
+    if (list.isEmpty) {
+      return List(0);
+    }
+
+    final List<Car> carList = List();
+    for (final map in list) {
+      carList.add(Car.fromMap(map));
+    }
+    print(carList);
+    return carList;
+  }
 }
