@@ -173,7 +173,7 @@ class _FormPageState extends State<FormPage> {
         _car.fuelType != null) {
       _formKey.currentState.save();
       CarRepository.instance.insert(_car);
-      //todo display toast and dismiss
+      Navigator.of(context).pop();
     } else {
       setState(() {
         _showErrors = true;
