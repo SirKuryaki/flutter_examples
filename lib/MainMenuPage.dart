@@ -19,13 +19,14 @@ class _MainMenuPageState extends State<MainMenuPage> {
         child: ListView(
           children: <Widget>[
             Center(
-                child: Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: const Text(
-                'Bienvenidos!',
-                style: TextStyle(fontSize: 22.0),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: const Text(
+                  'Bienvenidos!',
+                  style: TextStyle(fontSize: 22.0),
+                ),
               ),
-            )),
+            ),
             Container(
               height: 22.0,
             ),
