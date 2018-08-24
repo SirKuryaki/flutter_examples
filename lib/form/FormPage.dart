@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../model/Car.dart';
+import '../repos/CarRepository.dart';
 
 const String FORM_PAGE_ROUTE = '/form';
 
@@ -171,8 +172,8 @@ class _FormPageState extends State<FormPage> {
         _car.measureUnit != null &&
         _car.fuelType != null) {
       _formKey.currentState.save();
-
-//TODO: perform save
+      CarRepository.instance.insert(_car);
+      //todo display toast and dismiss
     } else {
       setState(() {
         _showErrors = true;
