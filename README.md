@@ -1,6 +1,10 @@
-# flutter_form_validator_example
+# Flutter examples
 
-A simple project showing Form Widget with validation logic.
+A simple project showing 3 concepts:
+
+- Navigation between Widgets
+- Form with validation
+- sqflite: Insert element / Query a table
 
 ## Getting Started
 
